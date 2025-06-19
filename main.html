@@ -1,36 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Login</title>
-    <script>
-        // JavaScript Function to Retrieve User Input
-        function getFormValue(event) {
-            // Prevent default form submission
-            event.preventDefault();
-            
-            // Retrieve values from the input fields
-            const firstName = document.querySelector('input[name="fname"]').value.trim();
-            const lastName = document.querySelector('input[name="lname"]').value.trim();
-            
-            // Concatenate full name
-            const fullName = `${firstName} ${lastName}`;
-            
-            // Display alert with full name
-            alert(fullName);
-        }
-    </script>
+  <title>Form Login - Full Name Alert</title>
 </head>
 <body>
-    <form id="userForm" onsubmit="getFormValue(event)">
-        <label for="fname">First Name:</label>
-        <input type="text" name="fname" required>
-        <br>
-        <label for="lname">Last Name:</label>
-        <input type="text" name="lname" required>
-        <br>
-        <button type="submit">Submit</button>
-    </form>
+  <h1>📝 Form Login</h1>
+
+  <form id="nameForm" onsubmit="getFormvalue(event)">
+    <label for="fname">First Name:</label>
+    <input type="text" name="fname" id="fname" required><br><br>
+
+    <label for="lname">Last Name:</label>
+    <input type="text" name="lname" id="lname" required><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="script.js"></script>
 </body>
 </html>
